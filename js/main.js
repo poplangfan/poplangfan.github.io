@@ -31,7 +31,7 @@ const observer = new IntersectionObserver((entries) => {
   });
 }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
 
-document.querySelectorAll('.project-card, .about-card, .skill-group, .kb-card, .oss-card, .writing-item, .patent-item').forEach(el => {
+document.querySelectorAll('.project-card, .about-card, .skill-group, .timeline-content, .patent-item').forEach(el => {
   el.classList.add('fade-in');
   observer.observe(el);
 });

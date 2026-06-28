@@ -137,7 +137,43 @@ section:nth-child(even) { background: var(--bg-secondary); }
 
 .section-desc { color: var(--text-secondary); margin-bottom: 32px; font-size: 15px; }
 
-/* ===== About ===== */
+/* ===== Experience / Timeline ===== */
+.timeline {
+  position: relative;
+  padding-left: 28px;
+  margin-bottom: 12px;
+}
+.timeline::before {
+  content: '';
+  position: absolute; left: 8px; top: 8px; bottom: 8px;
+  width: 2px; background: var(--border-default);
+}
+.timeline-item {
+  position: relative; margin-bottom: 28px;
+}
+.timeline-item:last-child { margin-bottom: 0; }
+.timeline-marker {
+  position: absolute; left: -24px; top: 6px;
+  width: 14px; height: 14px; border-radius: 50%;
+  background: var(--accent-primary);
+  border: 3px solid var(--bg-secondary);
+  z-index: 1;
+}
+.timeline-content {
+  background: var(--bg-card); border: 1px solid var(--border-default);
+  border-radius: 10px; padding: 24px;
+}
+.timeline-header {
+  display: flex; justify-content: space-between; align-items: baseline;
+  flex-wrap: wrap; gap: 8px; margin-bottom: 4px;
+}
+.timeline-header h3 { font-size: 18px; font-weight: 700; }
+.timeline-date { font-size: 13px; color: var(--text-tertiary); }
+.timeline-role { font-size: 15px; color: var(--accent-purple); margin-bottom: 12px; font-weight: 600; }
+.timeline-content ul { padding-left: 20px; }
+.timeline-content li { font-size: 13px; color: var(--text-secondary); margin-bottom: 4px; }
+
+/* ===== About (kept for impact summary cards) ===== */
 .about-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
 
 .about-card {
@@ -212,18 +248,17 @@ section:nth-child(even) { background: var(--bg-secondary); }
   border-radius: 20px; font-size: 12px; color: var(--accent-primary);
 }
 
-/* ===== Writing ===== */
-.writing-list { margin-bottom: 24px; }
+/* ===== Patents ===== */
 .patent-list { }
 
-.writing-item, .patent-item {
+.patent-item {
   display: flex; gap: 18px; align-items: flex-start;
   padding: 18px 0; border-bottom: 1px solid var(--border-muted);
 }
-.writing-item:last-child, .patent-item:last-child { border-bottom: none; }
+.patent-item:last-child { border-bottom: none; }
 
-.writing-info h4, .patent-item h4 { font-size: 15px; margin-bottom: 4px; }
-.writing-info p, .patent-item p { font-size: 13px; color: var(--text-secondary); }
+.patent-item h4 { font-size: 15px; margin-bottom: 4px; }
+.patent-item p { font-size: 13px; color: var(--text-secondary); }
 
 .patent-item { display: flex; gap: 20px; align-items: flex-start; }
 .patent-num {
@@ -233,38 +268,6 @@ section:nth-child(even) { background: var(--bg-secondary); }
   border-radius: 8px; font-size: 16px; font-weight: 700;
   color: var(--accent-orange); margin-top: 2px;
 }
-
-/* ===== Knowledge Base ===== */
-.kb-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 16px; margin-bottom: 24px; }
-
-.kb-card {
-  background: var(--bg-card); border: 1px solid var(--border-default);
-  border-radius: 10px; padding: 24px; transition: border-color 0.2s, transform 0.2s;
-}
-.kb-card:hover { border-color: var(--accent-primary); transform: translateY(-2px); }
-
-.kb-icon { font-size: 28px; margin-bottom: 12px; }
-.kb-card h3 { font-size: 15px; margin-bottom: 6px; }
-.kb-card p { font-size: 13px; color: var(--text-secondary); }
-
-.kb-note { font-size: 13px; color: var(--text-tertiary); text-align: center; }
-
-/* ===== Open Source ===== */
-.oss-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 14px; }
-
-.oss-card {
-  display: block; background: var(--bg-card); border: 1px solid var(--border-default);
-  border-radius: 10px; padding: 20px; transition: border-color 0.2s, transform 0.2s;
-  color: var(--text-primary);
-}
-.oss-card:hover { border-color: var(--accent-primary); transform: translateY(-2px); text-decoration: none; color: var(--text-primary); }
-
-.oss-header { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
-.oss-header h3 { font-size: 15px; }
-.oss-card > p { font-size: 13px; color: var(--text-secondary); margin-bottom: 12px; }
-
-.oss-meta { display: flex; flex-wrap: wrap; gap: 10px; font-size: 12px; color: var(--text-tertiary); }
-.oss-star { color: var(--accent-orange); }
 
 /* ===== Footer ===== */
 #footer {
