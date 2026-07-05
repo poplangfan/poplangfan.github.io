@@ -201,6 +201,19 @@ strong { color: var(--text-primary); font-weight: 600; }
   letter-spacing: 2px;
 }
 
+/* ── Header Email ── */
+.header-email {
+  display: inline-block;
+  margin-top: 8px;
+  font-size: 13px;
+  font-family: var(--font-mono);
+  color: var(--text-tertiary);
+  transition: color 0.2s;
+}
+.header-email:hover {
+  color: var(--accent);
+}
+
 /* ── PDF Export Button ── */
 .btn-pdf {
   display: inline-flex;
@@ -280,7 +293,6 @@ strong { color: var(--text-primary); font-weight: 600; }
   flex-shrink: 0;
 }
 
-.social-email span,
 .social-link-text span {
   font-size: 13px;
   font-family: var(--font-mono);
