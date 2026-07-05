@@ -1,56 +1,86 @@
-// Navigation scroll effect
-const nav = document.getElementById('nav');
-const sections = document.querySelectorAll('section[id]');
-const navLinks = document.querySelectorAll('.nav-links a');
+/**
+ * main.js — Navigation, animations, language toggle, misc interactions
+ * Depends on i18n.js (loaded first)
+ */
 
-// Mobile nav toggle
-const toggle = document.querySelector('.nav-toggle');
-const navMenu = document.querySelector('.nav-links');
-if (toggle && navMenu) {
-  toggle.addEventListener('click', () => navMenu.classList.toggle('open'));
-  navMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navMenu.classList.remove('open')));
-}
+(function () {
+  'use strict';
 
-// Highlight current section in nav
-function updateActiveNav() {
-  const scrollPos = window.scrollY + 80;
-  let current = '';
-  sections.forEach(section => {
-    const top = section.offsetTop;
-    if (scrollPos >= top) current = section.getAttribute('id');
+  // ═══════════════════════════════════════════
+  // Language Toggle
+  // ═══════════════════════════════════════════
+  document.querySelectorAll('.lang-btn').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var lang = this.dataset.lang;
+      if (lang) setLang(lang);
+    });
   });
-  navLinks.forEach(link => {
-    link.style.color = link.getAttribute('href') === '#' + current ? 'var(--text-primary)' : '';
+
+  // ═══════════════════════════════════════════
+  // Active Nav Tracking (IntersectionObserver)
+  // ═══════════════════════════════════════════
+  var navLinks = document.querySelectorAll('.nav-link');
+  var sections = document.querySelectorAll('section[id]');
+
+  if (navLinks.length && sections.length) {
+    var observerOptions = {
+      rootMargin: '-80px 0px -60% 0px',
+      threshold: 0
+    };
+
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (!entry.isIntersecting) return;
+        var id = entry.target.getAttribute('id');
+        navLinks.forEach(function (link) {
+          var href = link.getAttribute('href');
+          var isActive = href === '#' + id;
+          link.classList.toggle('active', isActive);
+        });
+      });
+    }, observerOptions);
+
+    sections.forEach(function (section) {
+      observer.observe(section);
+    });
+  }
+
+  // ═══════════════════════════════════════════
+  // Fade-in on scroll
+  // ═══════════════════════════════════════════
+  var fadeObserver = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+  document.querySelectorAll('.fade-in').forEach(function (el) {
+    fadeObserver.observe(el);
   });
-}
 
-// Fade-in on scroll
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) entry.target.classList.add('visible');
-  });
-}, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+  // ═══════════════════════════════════════════
+  // Dynamic copyright year
+  // ═══════════════════════════════════════════
+  var yearSpan = document.getElementById('copy-year');
+  if (yearSpan) {
+    yearSpan.textContent = new Date().getFullYear().toString();
+  }
 
-document.querySelectorAll('.project-card, .about-card, .skill-group, .timeline-content, .patent-item').forEach(el => {
-  el.classList.add('fade-in');
-  observer.observe(el);
-});
+  // ═══════════════════════════════════════════
+  // Spotlight — mouse-follow effect (desktop)
+  // ═══════════════════════════════════════════
+  var spotlight = document.querySelector('.spotlight');
+  if (spotlight && window.matchMedia('(pointer: fine)').matches) {
+    document.addEventListener('mousemove', function (e) {
+      var x = e.clientX;
+      var y = e.clientY;
+      spotlight.style.background = 'radial-gradient(' +
+        '600px circle at ' + x + 'px ' + y + 'px, ' +
+        'rgba(29, 78, 216, 0.15), ' +
+        'transparent 80%)';
+    });
+  }
 
-window.addEventListener('scroll', updateActiveNav, { passive: true });
-updateActiveNav();
-
-// Add subtle parallax to hero gradient
-window.addEventListener('scroll', () => {
-  const hero = document.getElementById('hero');
-  if (!hero) return;
-  const scrolled = window.scrollY;
-  const pseudo = hero.querySelector('::before');
-  // Instead animate the gradient via style
-  const gradient = hero.querySelector('::before');
-});
-
-// Dynamic copyright year
-const yearSpan = document.querySelector('.footer-text');
-if (yearSpan) {
-  yearSpan.textContent = yearSpan.textContent.replace('2026', new Date().getFullYear().toString());
-}
+})();

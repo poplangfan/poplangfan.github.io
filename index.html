@@ -3,314 +3,377 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="poplangfan — 测试开发 Leader / AI Agent 工程师，地平线10人团队，专注智驾测试工具链与多智能体系统">
-  <title>poplangfan — Test Tooling Lead & AI Agent Engineer</title>
+  <meta name="description" content="poplangfan — 测试工具开发组 Leader（10人），资深测试开发工程师，AI 提效工程师，专注智驾测试工具链与多智能体系统">
+  <title>poplangfan — 测试工具开发组 Leader · AI 提效工程师</title>
   <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-  <!-- Sidebar -->
-  <aside id="sidebar">
-    <div class="sidebar-header">
-      <img class="sidebar-avatar" src="medias/avatar.jpg" alt="avatar" onerror="this.style.display='none'">
-      <div>
-        <div class="sidebar-name">poplangfan</div>
-        <div class="sidebar-title">测试开发 Leader · AI Agent 工程师</div>
-      </div>
-    </div>
-    <p class="sidebar-tagline">地平线 测试工具开发组 Leader（10人）| 智驾测试工具链架构 | 多智能体协同</p>
+  <!-- Spotlight Gradient -->
+  <div class="spotlight"></div>
 
-    <nav class="sidebar-nav">
-      <a href="#experience" class="active">Experience</a>
-      <a href="#skills">Skills</a>
-      <a href="#projects">Projects</a>
-      <a href="#patents">Patents</a>
-    </nav>
+  <!-- Skip Link -->
+  <a href="#content" class="skip-link" data-i18n="skip">跳到内容</a>
 
-    <div class="sidebar-social">
-      <a href="https://github.com/poplangfan" target="_blank" rel="noopener" title="GitHub">
-        <svg viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
-      </a>
-      <a href="mailto:poplang@foxmail.com" title="Email">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
-      </a>
-    </div>
-  </aside>
+  <!-- Layout Container -->
+  <div class="container">
 
-  <button class="sidebar-toggle" onclick="document.getElementById('sidebar').classList.toggle('open')" aria-label="menu">☰</button>
+    <!-- ═══════════ Left: Header ═══════════ -->
+    <header class="header">
+      <div class="header-top">
+        <h1 class="header-name">poplangfan</h1>
+        <p class="header-tagline">
+          <span data-i18n="hero.line1">测试工具开发组 Leader（10人）</span><br>
+          <span data-i18n="hero.line2">资深测试开发工程师</span><br>
+          <span data-i18n="hero.line3">AI 提效工程师</span>
+        </p>
 
-  <!-- Main Content -->
-  <main id="content">
+        <!-- PDF Export -->
+        <button class="btn-pdf" onclick="window.print()" data-i18n-title="header.print" title="导出为 PDF">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+          <span data-i18n="header.print">导出 PDF</span>
+        </button>
 
-    <!-- Experience -->
-    <section id="experience">
-      <h2 class="section-title">Experience</h2>
-      <div class="timeline">
-        <div class="timeline-item">
-          <div class="timeline-marker"></div>
-          <div class="timeline-content">
-            <div class="timeline-header">
-              <h3>地平线</h3>
-              <span class="timeline-date">2024.4 — 至今</span>
-            </div>
-            <p class="timeline-role">软件测试工具开发组 Leader</p>
-            <ul>
-              <li>带领 10 人团队，负责智驾软件测试工具链的架构设计与研发</li>
-              <li>从零搭建 SaturnV QA 平台，推动测试自动化率 0% → 85%+</li>
-              <li>设计 Task-Action 两层架构，支撑 85 个任务模块 + 21 个动作组件的编排复用</li>
-              <li>引入 AI Agent 技术到测试流程，设计 5 角色多智能体协同架构</li>
-            </ul>
-          </div>
-        </div>
-        <div class="timeline-item">
-          <div class="timeline-marker"></div>
-          <div class="timeline-content">
-            <div class="timeline-header">
-              <h3>阿维塔</h3>
-              <span class="timeline-date">2023.4 — 2024.4</span>
-            </div>
-            <p class="timeline-role">资深测试开发工程师</p>
-            <ul>
-              <li>负责智驾软件集成测试与实车测试，覆盖 PNC / HMI / OS / 感知全链路</li>
-              <li>设计并落地自动化测试框架，开发 90+ 测试用例、38 套 conftest 配置</li>
-            </ul>
-          </div>
-        </div>
-        <div class="timeline-item">
-          <div class="timeline-marker secondary"></div>
-          <div class="timeline-content">
-            <div class="timeline-header">
-              <h3>测试开发工程师 — 汽车电子 / 通信</h3>
-              <span class="timeline-date">2017.7 — 2023.3</span>
-            </div>
-            <p class="timeline-role">软通动力 / 瑞友科技 / 中软国际</p>
-            <ul>
-              <li>技术成长路径：存储芯片验证 → 5G 射频测试 → MDC 智能车载 → E12 智能座舱</li>
-              <li>搭建 CI/CD 体系，月执行用例 30 万+，自动化率达标 95%，执行率 100%</li>
-              <li>Python + Django 开发测试管理平台，PyQt/PySide 开发桌面工具集</li>
-              <li>累计发现并跟踪闭环问题 500+，获最佳新人奖、质量之星奖、代码质量奖</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <!-- Education -->
-      <div style="margin-top: 3rem;">
-        <h3 style="color: var(--accent-primary); font-size: 16px; margin-bottom: 1rem;">教育背景</h3>
-        <div class="timeline-item" style="border: none;">
-          <div class="timeline-content">
-            <div class="timeline-header">
-              <h3>中北大学</h3>
-              <span class="timeline-date">2013 — 2017</span>
-            </div>
-            <p class="timeline-role">控制工程 本科</p>
-            <ul>
-              <li>校级奖学金二等奖 | 院级机器人大赛一等奖</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <!-- Impact Summary -->
-      <div class="about-grid">
-        <div class="about-card">
-          <h3>工程落地</h3>
-          <p>累计 <strong>16万+ 行</strong> Python 代码，开发 <strong>85 个</strong>任务模块 + <strong>21 个</strong>动作组件 + <strong>90+ 个</strong>自动化测试用例，覆盖 PNC / HMI / OS / 感知 / 稳定性全链路。</p>
-        </div>
-        <div class="about-card">
-          <h3>业务价值</h3>
-          <p>测试自动化率 <strong>0% → 85%+</strong>，日志分析从人工 2 小时缩短到自动化 <strong>5 分钟</strong>，月均拦截 <strong>70+</strong> 关键 Bug。</p>
-        </div>
-        <div class="about-card">
-          <h3>技术文档与专利</h3>
-          <p>4 项专利点挖掘 + 自动化交底书工具。累计输出技术文档 <strong>5 万+ 字</strong>，包括 MAS 架构设计、Agent 框架选型、联邦化架构等。</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Skills -->
-    <section id="skills">
-      <h2 class="section-title">Skills</h2>
-      <div class="skills-grid">
-        <div class="skill-group">
-          <h3>测试开发</h3>
-          <div class="skill-tags">
-            <span>Pytest</span><span>Allure</span><span>分布式测试</span><span>测试框架设计</span><span>CI/CD集成</span>
-          </div>
-        </div>
-        <div class="skill-group">
-          <h3>AI 工程</h3>
-          <div class="skill-tags">
-            <span>Agent 框架</span><span>RAG 知识库</span><span>LLM 应用</span><span>MCP 协议</span><span>多智能体协同</span>
-          </div>
-        </div>
-        <div class="skill-group">
-          <h3>后端开发</h3>
-          <div class="skill-tags">
-            <span>FastAPI</span><span>Streamlit</span><span>SQLAlchemy</span><span>Elasticsearch</span><span>SQLite</span>
-          </div>
-        </div>
-        <div class="skill-group">
-          <h3>车端测试</h3>
-          <div class="skill-tags">
-            <span>规控性能评价</span><span>回灌测试</span><span>CAN 总线</span><span>ROS2</span><span>MCAP 数据处理</span>
-          </div>
-        </div>
-        <div class="skill-group">
-          <h3>工程工具</h3>
-          <div class="skill-tags">
-            <span>Linux</span><span>Shell</span><span>SSH 自动化</span><span>Docker</span><span>GitLab CI</span><span>串口通信</span>
-          </div>
-        </div>
-        <div class="skill-group">
-          <h3>语言</h3>
-          <div class="skill-tags">
-            <span>Python</span><span>JavaScript</span><span>Go</span><span>SQL</span><span>Shell</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Projects -->
-    <section id="projects">
-      <h2 class="section-title">Projects</h2>
-
-      <div class="project-card feature-project">
-        <div class="project-header">
-          <h3>SaturnV QA — 智驾测试工具链平台</h3>
-          <span class="project-role">架构设计 & 核心开发</span>
-          <span class="project-scale">50,000+ 行</span>
-        </div>
-        <p class="project-desc">地平线内部智驾软件测试统一工具链：测试执行、日志分析、报告生成、数据管理。替代零散脚本和手工操作，10 人团队协作开发。</p>
-        <div class="project-arch">
-          <span>Web API (FastAPI)</span><span class="arch-arrow">&rarr;</span>
-          <span>Task Engine (85 modules)</span><span class="arch-arrow">&rarr;</span>
-          <span>Action Components (21)</span><span class="arch-arrow">&rarr;</span>
-          <span>SSH / 串口 / 继电器 / CAN / ROS2</span>
-        </div>
-        <div class="project-highlights">
-          <h4>核心技术</h4>
+        <!-- Navigation -->
+        <nav class="nav" aria-label="页面导航">
           <ul>
-            <li>设计 Task-Action 两层架构，实现任务编排和组件复用，支撑 85 个任务模块</li>
-            <li>集成 Elasticsearch 实现测试数据全文检索与聚合分析</li>
-            <li>开发打包发布工具链，支持 STP/Flow 双流水线自动部署</li>
-            <li>实现 SSH 跳板机通道，支持内网设备远程控制</li>
+            <li>
+              <a href="#about" class="nav-link active">
+                <span class="nav-indicator"></span>
+                <span class="nav-text" data-i18n="nav.about">关于</span>
+              </a>
+            </li>
+            <li>
+              <a href="#experience" class="nav-link">
+                <span class="nav-indicator"></span>
+                <span class="nav-text" data-i18n="nav.experience">经历</span>
+              </a>
+            </li>
+            <li>
+              <a href="#projects" class="nav-link">
+                <span class="nav-indicator"></span>
+                <span class="nav-text" data-i18n="nav.projects">项目</span>
+              </a>
+            </li>
+            <li>
+              <a href="#patents" class="nav-link">
+                <span class="nav-indicator"></span>
+                <span class="nav-text" data-i18n="nav.patents">专利</span>
+              </a>
+            </li>
           </ul>
-        </div>
-        <div class="project-impact">
-          <div class="impact-item">
-            <span class="impact-value">0 → 85%+</span>
-            <span class="impact-label">测试自动化率</span>
-          </div>
-          <div class="impact-item">
-            <span class="impact-value">2h → 5min</span>
-            <span class="impact-label">日志分析效率</span>
-          </div>
-          <div class="impact-item">
-            <span class="impact-value">70+/月</span>
-            <span class="impact-label">关键 Bug 拦截</span>
-          </div>
+        </nav>
+
+        <!-- Language Toggle -->
+        <div class="lang-switch">
+          <button data-lang="zh" class="lang-btn active" aria-label="切换为中文">中文</button>
+          <span class="lang-divider">|</span>
+          <button data-lang="en" class="lang-btn" aria-label="Switch to English">EN</button>
         </div>
       </div>
 
-      <div class="project-card feature-project">
-        <div class="project-header">
-          <h3>Agent 协同系统 — 多智能体协作 + 测试场景落地</h3>
-          <span class="project-role">独立设计 & 开发</span>
-          <span class="project-scale">5,000+ 行</span>
-        </div>
-        <p class="project-desc">从底层协作协议到上层测试场景应用，完整的多智能体系统工程实践。</p>
+      <!-- Social Links -->
+      <ul class="social" aria-label="社交链接">
+        <li>
+          <a href="https://github.com/poplangfan" target="_blank" rel="noopener" aria-label="GitHub" title="GitHub">
+            <svg viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+          </a>
+        </li>
+        <li>
+          <a href="mailto:poplang@foxmail.com" class="social-email" aria-label="Email" title="Email">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+            <span>poplang@foxmail.com</span>
+          </a>
+        </li>
+      </ul>
+    </header>
 
-        <h4 style="margin-top: 1.2rem; color: var(--accent-primary); font-size: 15px;">A2A Server — 多智能体协作服务器</h4>
-        <p class="project-desc">标准化任务看板服务，解决异构 Agent 之间缺乏统一任务协作协议的问题，支持 Agent 间任务分发与交接。</p>
-        <div class="project-arch">
-          <span>飞书Gateway</span><span class="arch-arrow">&rarr;</span>
-          <span>看板Dashboard</span><span class="arch-arrow">&rarr;</span>
-          <span>Agent A/B/C 认领</span><span class="arch-arrow">&rarr;</span>
-          <span>执行 / 交接 / 阻塞 / 完成</span>
+    <!-- ═══════════ Right: Main Content ═══════════ -->
+    <main id="content">
+
+      <!-- ── About ── -->
+      <section id="about" aria-label="关于">
+        <div class="section-header">
+          <h2 data-i18n="section.about">关于</h2>
         </div>
-        <div class="project-highlights">
-          <h4>核心技术</h4>
-          <ul>
-            <li>任务生命周期管理：ready → claimed → in_progress → done/blocked/cancelled</li>
-            <li>基于 SQLite BEGIN IMMEDIATE 实现原子认领，零竞争冲突</li>
-            <li>Claim Lock + 心跳超时自动回收，防止 Agent 宕机任务泄漏</li>
-            <li>全链路 TaskEvent 记录，支持耗时统计与问题回溯</li>
-          </ul>
+        <div>
+          <p data-i18n="about.p1">我是一名测试开发工程师，专注于智驾软件测试工具链与多智能体系统的架构设计。我带领 10 人团队从零搭建了 SaturnV QA 平台，将测试自动化率从 0 提升至 85%+，并持续探索 AI Agent 技术在测试领域的落地应用。</p>
+          <p data-i18n="about.p2">此前，我在阿维塔负责智驾软件集成测试与实车测试，覆盖 PNC / HMI / OS / 感知全链路。更早之前，我在软通动力、瑞友科技、中软国际等公司积累了从存储芯片到智能座舱的跨领域测试经验，累计发现并闭环问题 500+。</p>
+          <p data-i18n="about.p3">工作之余，我喜欢打篮球、跑步，偶尔写技术博客记录思考。</p>
+
+          <!-- Impact Cards -->
+          <div class="impact-grid">
+            <div class="impact-card fade-in">
+              <h3 data-i18n="impact.0.title">工程落地</h3>
+              <p data-i18n-html="impact.0.desc">累计 <strong>16万+ 行</strong> Python 代码，开发 <strong>85 个</strong>任务模块 + <strong>21 个</strong>动作组件 + <strong>90+ 个</strong>自动化测试用例，覆盖 PNC / HMI / OS / 感知 / 稳定性全链路。</p>
+            </div>
+            <div class="impact-card fade-in">
+              <h3 data-i18n="impact.1.title">业务价值</h3>
+              <p data-i18n-html="impact.1.desc">测试自动化率 <strong>0% → 85%+</strong>，日志分析从人工 2 小时缩短到自动化 <strong>5 分钟</strong>，月均拦截 <strong>70+</strong> 关键 Bug。</p>
+            </div>
+            <div class="impact-card fade-in">
+              <h3 data-i18n="impact.2.title">技术文档与专利</h3>
+              <p data-i18n-html="impact.2.desc">4 项专利点挖掘 + 自动化交底书工具。累计输出技术文档 <strong>5 万+ 字</strong>，包括 MAS 架构设计、Agent 框架选型、联邦化架构等。</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── Experience ── -->
+      <section id="experience" aria-label="工作经历">
+        <div class="section-header">
+          <h2 data-i18n="section.experience">经历</h2>
         </div>
 
-        <h4 style="margin-top: 1.5rem; color: var(--accent-primary); font-size: 15px;">智驾测试多智能体协同方案</h4>
-        <p class="project-desc">设计 5 角色 Agent 协作架构（测试架构师 / 算法专家 / 软件专家 / 硬件专家 / 复核者），基于 Hermes Agent 看板 + MCP 协议对接内部工具 + RAG 注入领域知识。输出 14,000 字技术方案。</p>
-        <div class="project-tags">
-          <span>MAS 架构</span><span>Hermes</span><span>MCP</span><span>RAG</span><span>5角色协同</span>
-        </div>
-      </div>
+        <ol class="exp-list group-list">
+          <!-- 地平线 -->
+          <li class="exp-item fade-in">
+            <div class="exp-card-bg"></div>
+            <header class="exp-date" data-i18n="exp.0.date">2024.4 — 至今</header>
+            <div class="exp-content">
+              <h3>
+                <span data-i18n="exp.0.role">软件测试工具开发组 Leader</span> · <span class="exp-company" data-i18n="exp.0.company">地平线</span>
+              </h3>
+              <ul class="exp-bullets">
+                <li data-i18n="exp.0.desc.0">带领 10 人团队，负责智驾软件测试工具链的架构设计与研发</li>
+                <li data-i18n="exp.0.desc.1">从零搭建 SaturnV QA 平台，推动测试自动化率 0% → 85%+</li>
+                <li data-i18n="exp.0.desc.2">设计 Task-Action 两层架构，支撑 85 个任务模块 + 21 个动作组件的编排复用</li>
+                <li data-i18n="exp.0.desc.3">引入 AI Agent 技术到测试流程，设计 5 角色多智能体协同架构</li>
+              </ul>
+              <ul class="exp-tags">
+                <li>Python</li><li>FastAPI</li><li>Elasticsearch</li><li>Pytest</li><li>Docker</li><li>SSH</li><li>GitLab CI</li><li>AI Agent</li>
+              </ul>
+            </div>
+          </li>
 
-      <div class="project-card feature-project">
-        <div class="project-header">
-          <h3>测试方法论 — 问题诊断与专利挖掘</h3>
-          <span class="project-role">数据分析 & 方法论</span>
+          <!-- 阿维塔 -->
+          <li class="exp-item fade-in">
+            <div class="exp-card-bg"></div>
+            <header class="exp-date" data-i18n="exp.1.date">2023.4 — 2024.4</header>
+            <div class="exp-content">
+              <h3>
+                <span data-i18n="exp.1.role">资深测试开发工程师</span> · <span class="exp-company" data-i18n="exp.1.company">阿维塔</span>
+              </h3>
+              <ul class="exp-bullets">
+                <li data-i18n="exp.1.desc.0">负责智驾软件集成测试与实车测试，覆盖 PNC / HMI / OS / 感知全链路</li>
+                <li data-i18n="exp.1.desc.1">设计并落地自动化测试框架，开发 90+ 测试用例、38 套 conftest 配置</li>
+              </ul>
+              <ul class="exp-tags">
+                <li>Python</li><li>Pytest</li><li>CAN</li><li>ROS2</li><li>Jenkins</li><li>MCAP</li>
+              </ul>
+            </div>
+          </li>
+
+          <!-- 外包经历 -->
+          <li class="exp-item fade-in">
+            <div class="exp-card-bg"></div>
+            <header class="exp-date" data-i18n="exp.2.date">2017.7 — 2023.3</header>
+            <div class="exp-content">
+              <h3>
+                <span data-i18n="exp.2.role">测试开发工程师 — 汽车电子 / 通信</span> · <span class="exp-company" data-i18n="exp.2.company">软通动力 / 瑞友科技 / 中软国际</span>
+              </h3>
+              <ul class="exp-bullets">
+                <li data-i18n="exp.2.desc.0">技术成长路径：存储芯片验证 → 5G 射频测试 → MDC 智能车载 → E12 智能座舱</li>
+                <li data-i18n="exp.2.desc.1">搭建 CI/CD 体系，月执行用例 30 万+，自动化率达标 95%，执行率 100%</li>
+                <li data-i18n="exp.2.desc.2">Python + Django 开发测试管理平台，PyQt/PySide 开发桌面工具集</li>
+                <li data-i18n="exp.2.desc.3">累计发现并跟踪闭环问题 500+，获最佳新人奖、质量之星奖、代码质量奖</li>
+              </ul>
+              <ul class="exp-tags">
+                <li>Python</li><li>Django</li><li>PyQt</li><li>Jenkins</li><li>Linux</li><li>Shell</li><li>SQL</li>
+              </ul>
+            </div>
+          </li>
+        </ol>
+
+        <!-- Education -->
+        <div class="edu-block fade-in">
+          <h3 class="edu-heading" data-i18n="edu.heading">教育背景</h3>
+          <div class="exp-item">
+            <div class="exp-card-bg"></div>
+            <header class="exp-date" data-i18n="edu.date">2013 — 2017</header>
+            <div class="exp-content">
+              <h3><span data-i18n="edu.school">中北大学</span> · <span data-i18n="edu.degree">控制工程 本科</span></h3>
+              <ul class="exp-bullets">
+                <li data-i18n="edu.desc.0">校级奖学金二等奖 | 院级机器人大赛一等奖</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── Projects ── -->
+      <section id="projects" aria-label="项目">
+        <div class="section-header">
+          <h2 data-i18n="section.projects">项目</h2>
         </div>
 
-        <h4 style="margin-top: 1rem; color: var(--accent-primary); font-size: 15px;">软件集成测试诊断与突破路径</h4>
-        <p class="project-desc">分析软件集成测试与实车测试数据断层（8 vs 490），设计分层突破路径：回灌增加性能指标计算、实车部署监控探针、接入 BBIT 标准输出回归报告。输出 15,000 字诊断报告。</p>
-        <div class="project-tags">
-          <span>数据分析</span><span>JIRA</span><span>性能评价</span><span>技术方案</span>
-        </div>
+        <ul class="proj-list group-list">
 
-        <h4 style="margin-top: 1.2rem; color: var(--accent-primary); font-size: 15px;">4 项专利挖掘</h4>
-        <ul style="margin-left: 1.2rem; color: var(--text-secondary); font-size: 13px;">
-          <li>测试日志多维度加权向量化与三级判定分析方法</li>
-          <li>基于解决思路优先级的检索结果优化方法</li>
-          <li>大规模日志智能核心错误提取与非对称上下文保留方法</li>
-          <li>多模式部署的日志分析系统架构</li>
+          <!-- SaturnV QA -->
+          <li class="proj-item fade-in">
+            <div class="proj-card-bg"></div>
+            <img class="proj-image" src="medias/featureimages/0.jpg" alt="SaturnV QA" loading="lazy" onerror="this.style.display='none'">
+            <div class="proj-content">
+              <h3>
+                <span data-i18n="proj.0.title">SaturnV QA — 智驾测试工具链平台</span>
+                <span class="proj-role-badge" data-i18n="proj.0.role">架构设计 & 核心开发</span>
+                <span class="proj-scale-badge" data-i18n="proj.0.scale">50,000+ 行</span>
+              </h3>
+              <p class="proj-desc" data-i18n="proj.0.desc">地平线内部智驾软件测试统一工具链：测试执行、日志分析、报告生成、数据管理。替代零散脚本和手工操作，10 人团队协作开发。</p>
+              <div class="proj-arch">
+                <span>Web API (FastAPI)</span><span class="proj-arrow">&rarr;</span>
+                <span>Task Engine (85 modules)</span><span class="proj-arrow">&rarr;</span>
+                <span>Action Components (21)</span><span class="proj-arrow">&rarr;</span>
+                <span>SSH / 串口 / 继电器 / CAN / ROS2</span>
+              </div>
+              <ul class="proj-bullets">
+                <li data-i18n="proj.0.highlight.0">设计 Task-Action 两层架构，实现任务编排和组件复用，支撑 85 个任务模块</li>
+                <li data-i18n="proj.0.highlight.1">集成 Elasticsearch 实现测试数据全文检索与聚合分析</li>
+                <li data-i18n="proj.0.highlight.2">开发打包发布工具链，支持 STP/Flow 双流水线自动部署</li>
+                <li data-i18n="proj.0.highlight.3">实现 SSH 跳板机通道，支持内网设备远程控制</li>
+              </ul>
+              <div class="proj-impact">
+                <div class="impact-stat">
+                  <span class="value" data-i18n="proj.0.impact.0.value">0 → 85%+</span>
+                  <span class="label" data-i18n="proj.0.impact.0.label">测试自动化率</span>
+                </div>
+                <div class="impact-stat">
+                  <span class="value" data-i18n="proj.0.impact.1.value">2h → 5min</span>
+                  <span class="label" data-i18n="proj.0.impact.1.label">日志分析效率</span>
+                </div>
+                <div class="impact-stat">
+                  <span class="value" data-i18n="proj.0.impact.2.value">70+/月</span>
+                  <span class="label" data-i18n="proj.0.impact.2.label">关键 Bug 拦截</span>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <!-- Agent 协同系统 -->
+          <li class="proj-item fade-in">
+            <div class="proj-card-bg"></div>
+            <img class="proj-image" src="medias/featureimages/1.jpg" alt="Agent System" loading="lazy" onerror="this.style.display='none'">
+            <div class="proj-content">
+              <h3>
+                <span data-i18n="proj.1.title">Agent 协同系统 — 多智能体协作 + 测试场景落地</span>
+                <span class="proj-role-badge" data-i18n="proj.1.role">独立设计 & 开发</span>
+                <span class="proj-scale-badge" data-i18n="proj.1.scale">5,000+ 行</span>
+              </h3>
+              <p class="proj-desc" data-i18n="proj.1.desc">从底层协作协议到上层测试场景应用，完整的多智能体系统工程实践。</p>
+
+              <!-- Sub 1: A2A Server -->
+              <div class="proj-sub">
+                <h4 data-i18n="proj.1.sub1.title">A2A Server — 多智能体协作服务器</h4>
+                <p class="proj-desc" data-i18n="proj.1.sub1.desc">标准化任务看板服务，解决异构 Agent 之间缺乏统一任务协作协议的问题，支持 Agent 间任务分发与交接。</p>
+                <div class="proj-arch">
+                  <span>飞书Gateway</span><span class="proj-arrow">&rarr;</span>
+                  <span>看板Dashboard</span><span class="proj-arrow">&rarr;</span>
+                  <span>Agent A/B/C 认领</span><span class="proj-arrow">&rarr;</span>
+                  <span>执行 / 交接 / 阻塞 / 完成</span>
+                </div>
+                <ul class="proj-bullets">
+                  <li data-i18n="proj.1.sub1.highlight.0">任务生命周期管理：ready → claimed → in_progress → done/blocked/cancelled</li>
+                  <li data-i18n="proj.1.sub1.highlight.1">基于 SQLite BEGIN IMMEDIATE 实现原子认领，零竞争冲突</li>
+                  <li data-i18n="proj.1.sub1.highlight.2">Claim Lock + 心跳超时自动回收，防止 Agent 宕机任务泄漏</li>
+                  <li data-i18n="proj.1.sub1.highlight.3">全链路 TaskEvent 记录，支持耗时统计与问题回溯</li>
+                </ul>
+              </div>
+
+              <!-- Sub 2: 智驾测试 -->
+              <div class="proj-sub">
+                <h4 data-i18n="proj.1.sub2.title">智驾测试多智能体协同方案</h4>
+                <p class="proj-desc" data-i18n="proj.1.sub2.desc">设计 5 角色 Agent 协作架构（测试架构师 / 算法专家 / 软件专家 / 硬件专家 / 复核者），基于 Hermes Agent 看板 + MCP 协议对接内部工具 + RAG 注入领域知识。输出 14,000 字技术方案。</p>
+                <ul class="proj-tags">
+                  <li>MAS 架构</li><li>Hermes</li><li>MCP</li><li>RAG</li><li>5角色协同</li>
+                </ul>
+              </div>
+            </div>
+          </li>
+
+          <!-- 测试方法论 -->
+          <li class="proj-item fade-in">
+            <div class="proj-card-bg"></div>
+            <img class="proj-image" src="medias/featureimages/2.jpg" alt="Test Methodology" loading="lazy" onerror="this.style.display='none'">
+            <div class="proj-content">
+              <h3>
+                <span data-i18n="proj.2.title">测试方法论 — 问题诊断与专利挖掘</span>
+                <span class="proj-role-badge" data-i18n="proj.2.role">数据分析 & 方法论</span>
+              </h3>
+
+              <div class="proj-sub">
+                <h4 data-i18n="proj.2.sub1.title">软件集成测试诊断与突破路径</h4>
+                <p class="proj-desc" data-i18n="proj.2.sub1.desc">分析软件集成测试与实车测试数据断层（8 vs 490），设计分层突破路径：回灌增加性能指标计算、实车部署监控探针、接入 BBIT 标准输出回归报告。输出 15,000 字诊断报告。</p>
+                <ul class="proj-tags">
+                  <li>数据分析</li><li>JIRA</li><li>性能评价</li><li>技术方案</li>
+                </ul>
+              </div>
+
+              <div class="proj-sub">
+                <h4 data-i18n="proj.2.sub2.title">4 项专利挖掘</h4>
+                <ul class="proj-bullets">
+                  <li data-i18n="proj.2.sub2.desc.0">测试日志多维度加权向量化与三级判定分析方法</li>
+                  <li data-i18n="proj.2.sub2.desc.1">基于解决思路优先级的检索结果优化方法</li>
+                  <li data-i18n="proj.2.sub2.desc.2">大规模日志智能核心错误提取与非对称上下文保留方法</li>
+                  <li data-i18n="proj.2.sub2.desc.3">多模式部署的日志分析系统架构</li>
+                </ul>
+              </div>
+            </div>
+          </li>
         </ul>
-      </div>
-    </section>
+      </section>
 
-    <!-- Patents -->
-    <section id="patents">
-      <h2 class="section-title">Patents</h2>
-      <div class="patent-list">
-        <div class="patent-item">
-          <span class="patent-num">01</span>
-          <div>
-            <h4>测试日志多维度加权向量化与三级判定分析方法</h4>
-            <p>多维度权重（用例名 0.25 + 错误信息 0.40 + 堆栈 0.15 + 元数据 0.20）+ 三级判定：已知 / 边界模糊 / 新问题</p>
-          </div>
+      <!-- ── Patents ── -->
+      <section id="patents" aria-label="专利">
+        <div class="section-header">
+          <h2 data-i18n="section.patents">专利</h2>
         </div>
-        <div class="patent-item">
-          <span class="patent-num">02</span>
-          <div>
-            <h4>基于解决思路优先级的检索结果优化方法</h4>
-            <p>检索结果按解决方案可执行性重排序，提升一线测试人员问题解决效率</p>
-          </div>
-        </div>
-        <div class="patent-item">
-          <span class="patent-num">03</span>
-          <div>
-            <h4>大规模日志智能核心错误提取与非对称上下文保留方法</h4>
-            <p>自动提取核心错误栈，保留非对称上下文（前短后长）降低存储成本</p>
-          </div>
-        </div>
-        <div class="patent-item">
-          <span class="patent-num">04</span>
-          <div>
-            <h4>多模式部署的日志分析系统架构</h4>
-            <p>支持本地 / 云端 / 边缘三种部署模式</p>
-          </div>
-        </div>
-      </div>
-    </section>
 
-    <!-- Footer -->
-    <footer id="footer">
-      <p>poplangfan &copy; 2026</p>
-    </footer>
+        <ul class="patent-list">
+          <li class="patent-item fade-in">
+            <span class="patent-num">01</span>
+            <div class="patent-content">
+              <h4 data-i18n="patent.0.title">测试日志多维度加权向量化与三级判定分析方法</h4>
+              <p data-i18n="patent.0.desc">多维度权重（用例名 0.25 + 错误信息 0.40 + 堆栈 0.15 + 元数据 0.20）+ 三级判定：已知 / 边界模糊 / 新问题</p>
+            </div>
+          </li>
+          <li class="patent-item fade-in">
+            <span class="patent-num">02</span>
+            <div class="patent-content">
+              <h4 data-i18n="patent.1.title">基于解决思路优先级的检索结果优化方法</h4>
+              <p data-i18n="patent.1.desc">检索结果按解决方案可执行性重排序，提升一线测试人员问题解决效率</p>
+            </div>
+          </li>
+          <li class="patent-item fade-in">
+            <span class="patent-num">03</span>
+            <div class="patent-content">
+              <h4 data-i18n="patent.2.title">大规模日志智能核心错误提取与非对称上下文保留方法</h4>
+              <p data-i18n="patent.2.desc">自动提取核心错误栈，保留非对称上下文（前短后长）降低存储成本</p>
+            </div>
+          </li>
+          <li class="patent-item fade-in">
+            <span class="patent-num">04</span>
+            <div class="patent-content">
+              <h4 data-i18n="patent.3.title">多模式部署的日志分析系统架构</h4>
+              <p data-i18n="patent.3.desc">支持本地 / 云端 / 边缘三种部署模式</p>
+            </div>
+          </li>
+        </ul>
+      </section>
 
-  </main>
+      <!-- ── Footer ── -->
+      <footer id="footer">
+        <p data-i18n="footer.built">由 poplangfan 设计并开发。基于纯 HTML / CSS / JavaScript 构建，部署于 GitHub Pages。</p>
+        <p class="footer-copy">© <span data-i18n="footer.copy">poplangfan</span> <span id="copy-year">2026</span></p>
+      </footer>
 
+    </main>
+  </div>
+
+  <script src="js/i18n.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>
