@@ -3,47 +3,48 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="poplangfan — 软件测试工具开发 Leader / AI Agent 工程师，地平线10人团队Leader，专注智驾测试工具链与多智能体系统">
+  <meta name="description" content="poplangfan — 测试开发 Leader / AI Agent 工程师，地平线10人团队，专注智驾测试工具链与多智能体系统">
   <title>poplangfan — Test Tooling Lead & AI Agent Engineer</title>
   <link rel="icon" type="image/png" href="favicon.png">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <nav id="nav">
-    <div class="nav-inner">
-      <a href="#hero" class="nav-brand">poplangfan</a>
-      <div class="nav-links">
-        <a href="#experience">Experience</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
-        <a href="#patents">Patents</a>
-      </div>
-      <button class="nav-toggle" aria-label="toggle menu">☰</button>
-    </div>
-  </nav>
 
-  <!-- Hero -->
-  <section id="hero">
-    <div class="container">
-      <div class="hero-avatar">
-        <img src="medias/avatar.jpg" alt="avatar" onerror="this.style.display='none'">
-      </div>
-      <h1 class="hero-name">poplangfan</h1>
-      <p class="hero-tagline">软件测试工具开发 Leader · AI Agent 工程师</p>
-      <p class="hero-subtitle">地平线 测试工具开发组 Leader（10人） | 智驾测试工具链架构 | 多智能体协同 | 16万+ 行代码落地</p>
-      <div class="hero-links">
-        <a href="https://github.com/poplangfan" class="btn btn-primary" target="_blank" rel="noopener">
-          <svg width="20" height="20" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
-          GitHub
-        </a>
-        <a href="#projects" class="btn btn-outline">View Projects</a>
+  <!-- Sidebar -->
+  <aside id="sidebar">
+    <div class="sidebar-header">
+      <img class="sidebar-avatar" src="medias/avatar.jpg" alt="avatar" onerror="this.style.display='none'">
+      <div>
+        <div class="sidebar-name">poplangfan</div>
+        <div class="sidebar-title">测试开发 Leader · AI Agent 工程师</div>
       </div>
     </div>
-  </section>
+    <p class="sidebar-tagline">地平线 测试工具开发组 Leader（10人）| 智驾测试工具链架构 | 多智能体协同</p>
 
-  <!-- Experience -->
-  <section id="experience">
-    <div class="container">
+    <nav class="sidebar-nav">
+      <a href="#experience" class="active">Experience</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#patents">Patents</a>
+    </nav>
+
+    <div class="sidebar-social">
+      <a href="https://github.com/poplangfan" target="_blank" rel="noopener" title="GitHub">
+        <svg viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+      </a>
+      <a href="mailto:poplang@foxmail.com" title="Email">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+      </a>
+    </div>
+  </aside>
+
+  <button class="sidebar-toggle" onclick="document.getElementById('sidebar').classList.toggle('open')" aria-label="menu">☰</button>
+
+  <!-- Main Content -->
+  <main id="content">
+
+    <!-- Experience -->
+    <section id="experience">
       <h2 class="section-title">Experience</h2>
       <div class="timeline">
         <div class="timeline-item">
@@ -96,7 +97,7 @@
 
       <!-- Education -->
       <div style="margin-top: 3rem;">
-        <h3 style="color: var(--accent); margin-bottom: 1rem;">教育背景</h3>
+        <h3 style="color: var(--accent-primary); font-size: 16px; margin-bottom: 1rem;">教育背景</h3>
         <div class="timeline-item" style="border: none;">
           <div class="timeline-content">
             <div class="timeline-header">
@@ -112,7 +113,7 @@
       </div>
 
       <!-- Impact Summary -->
-      <div class="about-grid" style="margin-top: 3rem;">
+      <div class="about-grid">
         <div class="about-card">
           <h3>工程落地</h3>
           <p>累计 <strong>16万+ 行</strong> Python 代码，开发 <strong>85 个</strong>任务模块 + <strong>21 个</strong>动作组件 + <strong>90+ 个</strong>自动化测试用例，覆盖 PNC / HMI / OS / 感知 / 稳定性全链路。</p>
@@ -126,12 +127,10 @@
           <p>4 项专利点挖掘 + 自动化交底书工具。累计输出技术文档 <strong>5 万+ 字</strong>，包括 MAS 架构设计、Agent 框架选型、联邦化架构等。</p>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Skills -->
-  <section id="skills">
-    <div class="container">
+    <!-- Skills -->
+    <section id="skills">
       <h2 class="section-title">Skills</h2>
       <div class="skills-grid">
         <div class="skill-group">
@@ -171,12 +170,10 @@
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Projects -->
-  <section id="projects">
-    <div class="container">
+    <!-- Projects -->
+    <section id="projects">
       <h2 class="section-title">Projects</h2>
 
       <div class="project-card feature-project">
@@ -225,7 +222,7 @@
         </div>
         <p class="project-desc">从底层协作协议到上层测试场景应用，完整的多智能体系统工程实践。</p>
 
-        <h4 style="margin-top: 1.2rem; color: var(--accent);">A2A Server — 多智能体协作服务器</h4>
+        <h4 style="margin-top: 1.2rem; color: var(--accent-primary); font-size: 15px;">A2A Server — 多智能体协作服务器</h4>
         <p class="project-desc">标准化任务看板服务，解决异构 Agent 之间缺乏统一任务协作协议的问题，支持 Agent 间任务分发与交接。</p>
         <div class="project-arch">
           <span>飞书Gateway</span><span class="arch-arrow">&rarr;</span>
@@ -243,7 +240,7 @@
           </ul>
         </div>
 
-        <h4 style="margin-top: 1.5rem; color: var(--accent);">智驾测试多智能体协同方案</h4>
+        <h4 style="margin-top: 1.5rem; color: var(--accent-primary); font-size: 15px;">智驾测试多智能体协同方案</h4>
         <p class="project-desc">设计 5 角色 Agent 协作架构（测试架构师 / 算法专家 / 软件专家 / 硬件专家 / 复核者），基于 Hermes Agent 看板 + MCP 协议对接内部工具 + RAG 注入领域知识。输出 14,000 字技术方案。</p>
         <div class="project-tags">
           <span>MAS 架构</span><span>Hermes</span><span>MCP</span><span>RAG</span><span>5角色协同</span>
@@ -256,26 +253,24 @@
           <span class="project-role">数据分析 & 方法论</span>
         </div>
 
-        <h4 style="margin-top: 1rem; color: var(--accent);">软件集成测试诊断与突破路径</h4>
+        <h4 style="margin-top: 1rem; color: var(--accent-primary); font-size: 15px;">软件集成测试诊断与突破路径</h4>
         <p class="project-desc">分析软件集成测试与实车测试数据断层（8 vs 490），设计分层突破路径：回灌增加性能指标计算、实车部署监控探针、接入 BBIT 标准输出回归报告。输出 15,000 字诊断报告。</p>
         <div class="project-tags">
           <span>数据分析</span><span>JIRA</span><span>性能评价</span><span>技术方案</span>
         </div>
 
-        <h4 style="margin-top: 1.2rem; color: var(--accent);">4 项专利挖掘</h4>
-        <ul style="margin-left: 1.2rem; color: var(--text-secondary);">
+        <h4 style="margin-top: 1.2rem; color: var(--accent-primary); font-size: 15px;">4 项专利挖掘</h4>
+        <ul style="margin-left: 1.2rem; color: var(--text-secondary); font-size: 13px;">
           <li>测试日志多维度加权向量化与三级判定分析方法</li>
           <li>基于解决思路优先级的检索结果优化方法</li>
           <li>大规模日志智能核心错误提取与非对称上下文保留方法</li>
           <li>多模式部署的日志分析系统架构</li>
         </ul>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Patents Detail -->
-  <section id="patents">
-    <div class="container">
+    <!-- Patents -->
+    <section id="patents">
       <h2 class="section-title">Patents</h2>
       <div class="patent-list">
         <div class="patent-item">
@@ -307,20 +302,14 @@
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Footer -->
-  <footer id="footer">
-    <div class="container">
-      <div class="footer-links">
-        <a href="https://github.com/poplangfan" target="_blank" rel="noopener">
-          <svg width="20" height="20" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
-        </a>
-      </div>
-      <p class="footer-text">poplangfan &copy; 2026</p>
-    </div>
-  </footer>
+    <!-- Footer -->
+    <footer id="footer">
+      <p>poplangfan &copy; 2026</p>
+    </footer>
+
+  </main>
 
   <script src="js/main.js"></script>
 </body>
