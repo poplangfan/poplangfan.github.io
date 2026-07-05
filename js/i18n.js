@@ -34,7 +34,7 @@ const I18N = {
     // ── About ──
     'about.p1': '我是一名测试开发工程师，专注于智驾软件测试工具链与多智能体系统的架构设计。我带领 10 人团队从零搭建了 SaturnV QA 平台，将测试自动化率从 0 提升至 85%+，并持续探索 AI Agent 技术在测试领域的落地应用。',
     'about.p2': '此前，我在阿维塔负责智驾软件集成测试与实车测试，覆盖 PNC / HMI / OS / 感知全链路。更早之前，我在软通动力、瑞友科技、中软国际等公司积累了从存储芯片到智能座舱的跨领域测试经验，累计发现并闭环问题 500+。',
-    'about.p3': '工作之余，我喜欢打篮球、跑步，偶尔写技术博客记录思考。',
+    'about.p3': '工作之余，我喜欢跑步，偶尔写技术博客记录思考。',
 
     // ── Impact 卡片 ──
     'impact.0.title': '工程落地',
@@ -161,7 +161,7 @@ const I18N = {
 
     'about.p1': 'I\'m a test development engineer specializing in autonomous driving test toolchains and multi-agent system architecture. I lead a 10-person team that built the SaturnV QA platform from scratch, driving test automation from 0 to 85%+, while continuously exploring AI Agent applications in testing.',
     'about.p2': 'Previously at AVATR, I was responsible for autonomous driving software integration and vehicle testing across the full PNC / HMI / OS / perception stack. Earlier in my career at iSoftStone, Ruiyou, and Chinasoft, I accumulated cross-domain testing experience spanning storage chips to smart cockpits, closing 500+ issues.',
-    'about.p3': 'In my spare time, I enjoy playing basketball, running, and occasionally writing about tech.',
+    'about.p3': 'In my spare time, I enjoy running and occasionally writing about tech.',
 
     'impact.0.title': 'Engineering',
     'impact.0.desc': 'Over <strong>160,000 lines</strong> of Python code, <strong>85</strong> task modules + <strong>21</strong> action components + <strong>90+</strong> automated test cases across PNC / HMI / OS / perception / stability.',
