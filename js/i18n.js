@@ -33,7 +33,7 @@ const I18N = {
 
     // ── About ──
     'about.p1': '我是一名测试开发工程师，专注于智驾软件测试工具链与多智能体系统的架构设计。我带领 10 人团队从零搭建了 SaturnV QA 平台，将测试自动化率从 0 提升至 85%+，并持续探索 AI Agent 技术在测试领域的落地应用。',
-    'about.p2': '此前，我在阿维塔负责智驾软件集成测试与实车测试，覆盖 PNC / HMI / OS / 感知全链路。更早之前，我在软通动力、瑞友科技、中软国际等公司积累了从存储芯片到智能座舱的跨领域测试经验，累计发现并闭环问题 500+。',
+    'about.p2': '此前，我在阿维塔负责智驾软件集成测试与实车测试，覆盖 PNC / HMI / OS / 感知全链路。',
     'about.p3': '工作之余，我喜欢跑步，偶尔写技术博客记录思考。',
 
     // ── Impact 卡片 ──
@@ -61,14 +61,7 @@ const I18N = {
     'exp.1.desc.0': '负责智驾软件集成测试与实车测试，覆盖 PNC / HMI / OS / 感知全链路',
     'exp.1.desc.1': '设计并落地自动化测试框架，开发 90+ 测试用例、38 套 conftest 配置',
 
-    // exp.2: 外包经历
-    'exp.2.role': '测试开发工程师 — 汽车电子 / 通信',
-    'exp.2.company': '软通动力 / 瑞友科技 / 中软国际',
-    'exp.2.date': '2017.7 — 2023.3',
-    'exp.2.desc.0': '技术成长路径：存储芯片验证 → 5G 射频测试 → MDC 智能车载 → E12 智能座舱',
-    'exp.2.desc.1': '搭建 CI/CD 体系，月执行用例 30 万+，自动化率达标 95%，执行率 100%',
-    'exp.2.desc.2': 'Python + Django 开发测试管理平台，PyQt/PySide 开发桌面工具集',
-    'exp.2.desc.3': '累计发现并跟踪闭环问题 500+，获最佳新人奖、质量之星奖、代码质量奖',
+
 
     // ── Education ──
     'edu.heading': '教育背景',
@@ -160,7 +153,7 @@ const I18N = {
     'section.patents': 'Patents',
 
     'about.p1': 'I\'m a test development engineer specializing in autonomous driving test toolchains and multi-agent system architecture. I lead a 10-person team that built the SaturnV QA platform from scratch, driving test automation from 0 to 85%+, while continuously exploring AI Agent applications in testing.',
-    'about.p2': 'Previously at AVATR, I was responsible for autonomous driving software integration and vehicle testing across the full PNC / HMI / OS / perception stack. Earlier in my career at iSoftStone, Ruiyou, and Chinasoft, I accumulated cross-domain testing experience spanning storage chips to smart cockpits, closing 500+ issues.',
+    'about.p2': 'Previously at AVATR, I was responsible for autonomous driving software integration and vehicle testing across the full PNC / HMI / OS / perception stack.',
     'about.p3': 'In my spare time, I enjoy running and occasionally writing about tech.',
 
     'impact.0.title': 'Engineering',
@@ -186,14 +179,7 @@ const I18N = {
     'exp.1.desc.0': 'Responsible for autonomous driving software integration and vehicle testing across PNC / HMI / OS / perception stack',
     'exp.1.desc.1': 'Designed and implemented automation test framework with 90+ test cases and 38 conftest configurations',
 
-    // exp.2: Outsourcing
-    'exp.2.role': 'Test Development Engineer — Automotive / Telecom',
-    'exp.2.company': 'iSoftStone / Ruiyou / Chinasoft',
-    'exp.2.date': 'Jul 2017 — Mar 2023',
-    'exp.2.desc.0': 'Career progression: storage chip validation → 5G RF testing → MDC intelligent vehicle → E12 smart cockpit',
-    'exp.2.desc.1': 'Built CI/CD pipeline processing 300k+ test cases monthly, achieving 95% automation coverage at 100% execution rate',
-    'exp.2.desc.2': 'Developed test management platform with Python + Django and desktop tooling with PyQt/PySide',
-    'exp.2.desc.3': 'Identified and tracked 500+ issues to closure; awarded Best Newcomer, Quality Star, and Code Quality awards',
+
 
     // Education
     'edu.heading': 'Education',
